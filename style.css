@@ -26,6 +26,7 @@ body {
     align-items: center;
 }
 
+/* Icono de hamburguesa, solo visible en pantallas pequeñas */
 .menu-icon {
     font-size: 30px;
     color: #00ff00;
@@ -35,11 +36,13 @@ body {
     display: none; /* Ocultar el icono en pantallas grandes */
 }
 
+/* Enlaces del menú */
 .nav-links {
     display: flex;
     gap: 20px;
 }
 
+/* Estilo de los enlaces del menú */
 .nav a {
     color: #00ff00;
     text-decoration: none;
@@ -55,6 +58,7 @@ body {
     color: #000;
 }
 
+/* Contenido principal */
 .content {
     padding: 20px;
     max-width: 1200px;
@@ -65,29 +69,33 @@ body {
 
 /* Para pantallas más pequeñas (menores a 768px) */
 @media (max-width: 768px) {
+    /* Mostrar el icono de hamburguesa en pantallas pequeñas */
     .menu-icon {
-        display: block; /* Mostrar el icono de hamburguesa en pantallas pequeñas */
+        display: block;
     }
 
+    /* Ocultar los enlaces de navegación por defecto en pantallas pequeñas */
     .nav-links {
-        display: none; /* Ocultar los enlaces por defecto */
+        display: none;
         flex-direction: column; /* Apilar los enlaces verticalmente */
         width: 100%;
         text-align: left;
         background-color: #333;
         position: absolute;
-        top: 60px;
+        top: 60px; /* Colocar debajo del icono de hamburguesa */
         left: 0;
         padding: 10px 0;
         z-index: 99;
     }
 
+    /* Mostrar los enlaces cuando el menú tenga la clase 'active' */
     .nav-links.active {
-        display: flex; /* Mostrar los enlaces cuando el menú tiene la clase 'active' */
+        display: flex;
     }
 
+    /* Alinear los enlaces de forma que ocupen todo el ancho */
     .nav a {
-        margin: 10px 0; /* Añadir espacio entre los enlaces */
+        margin: 10px 0;
         width: 100%; /* Hacer que los enlaces ocupen todo el ancho */
         text-align: center; /* Centrar los enlaces */
     }
