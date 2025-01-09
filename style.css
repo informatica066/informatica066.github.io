@@ -30,6 +30,8 @@ body {
     padding: 5px 10px;
     border: 1px solid #00ff00;
     border-radius: 5px;
+    display: inline-block; /* Cambiado de block a inline-block */
+    margin-bottom: 10px; /* Espacio entre los elementos */
 }
 
 .nav a:hover {
@@ -85,12 +87,14 @@ body {
 
     .nav {
         padding: 15px 0; /* Aumentar el padding para evitar que los enlaces se vean pegados */
+        text-align: left; /* Alinear el texto a la izquierda */
     }
 
     .nav a {
         margin: 10px 0; /* Asegurar que haya espacio entre los enlaces de navegación */
         display: block; /* Hacer que los enlaces se apilen verticalmente */
-        padding: 10px 0; /* Aumentar el padding para mejor separación */
+        padding: 10px 15px; /* Aumentar el padding para mejor separación */
+        width: 100%; /* Hacer que los enlaces ocupen todo el ancho */
     }
 
     .content {
