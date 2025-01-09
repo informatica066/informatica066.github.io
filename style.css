@@ -1,71 +1,124 @@
+/* General */
 body {
-            background-color: #1a1a1a;
-            color: #00ff00;
-            font-family: 'Courier New', monospace;
-            margin: 0;
-            padding: 0;
-        }
-        
-        .header {
-            background-color: #000;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 2px solid #00ff00;
-        }
-        
-        .nav {
-            background-color: #333;
-            padding: 10px;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        .nav a {
-            color: #00ff00;
-            text-decoration: none;
-            margin: 0 15px;
-            padding: 5px 10px;
-            border: 1px solid #00ff00;
-            border-radius: 5px;
-        }
-        
-        .nav a:hover {
-            background-color: #00ff00;
-            color: #000;
-        }
-        
-        .content {
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .card {
-            background-color: #333;
-            border: 1px solid #00ff00;
-            border-radius: 10px;
-            padding: 15px;
-            margin: 15px 0;
-        }
+    background-color: #1a1a1a;
+    color: #00ff00;
+    font-family: 'Courier New', monospace;
+    margin: 0;
+    padding: 0;
+}
 
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
+.header {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #00ff00;
+}
 
-        .code-block {
-            background-color: #000;
-            padding: 15px;
-            border-radius: 5px;
-            overflow-x: auto;
-        }
+.nav {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
 
-        .featured-image {
-            max-width: 100%;
-            height: auto;
-            border: 2px solid #00ff00;
-            border-radius: 5px;
-        }
+.nav a {
+    color: #00ff00;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 5px 10px;
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+}
+
+.nav a:hover {
+    background-color: #00ff00;
+    color: #000;
+}
+
+.content {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #333;
+    border: 1px solid #00ff00;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.code-block {
+    background-color: #000;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+.featured-image {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #00ff00;
+    border-radius: 5px;
+}
+
+/* Añadir Media Queries para Responsividad */
+
+/* Para pantallas más pequeñas, ajustamos la cuadrícula */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Cambiar a una columna para pantallas pequeñas */
+    }
+    
+    .header {
+        padding: 15px; /* Reducir el padding en el header */
+    }
+
+    .nav {
+        padding: 8px; /* Reducir el padding en la navegación */
+    }
+
+    .nav a {
+        margin: 0 10px; /* Reducir el margen de los enlaces de navegación */
+    }
+
+    .content {
+        padding: 15px; /* Reducir padding en el contenido */
+    }
+
+    .card {
+        margin: 10px 0; /* Reducir margen entre tarjetas */
+    }
+
+    .featured-image {
+        border-width: 1px; /* Reducir el grosor del borde de la imagen en pantallas pequeñas */
+    }
+}
+
+/* Para pantallas muy pequeñas, como móviles (por debajo de 480px) */
+@media (max-width: 480px) {
+    .header {
+        font-size: 16px; /* Reducir tamaño de fuente en el header */
+    }
+
+    .nav a {
+        font-size: 14px; /* Reducir el tamaño de fuente en los enlaces de la navegación */
+    }
+
+    .content {
+        padding: 10px; /* Reducir padding del contenido */
+    }
+
+    .card {
+        padding: 10px; /* Reducir padding de las tarjetas */
+    }
+}
