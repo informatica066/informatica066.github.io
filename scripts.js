@@ -1,4 +1,9 @@
-document.getElementById('menu-icon').addEventListener('click', function() {
-    var navLinks = document.getElementById('nav-links');
-    navLinks.classList.toggle('show'); // Toggle the display of the menu
-});
+ document.addEventListener("DOMContentLoaded", function() {
+        const menuIcon = document.querySelector('.menu-icon');
+        const navLinks = document.querySelector('.nav-links');
+
+        // Toggle the 'show' class when the menu icon is clicked
+        menuIcon.addEventListener('click', function() {
+            navLinks.classList.toggle('show');
+        });
+    });
