@@ -21,6 +21,27 @@ body {
     position: sticky;
     top: 0;
     z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav .menu-toggle {
+    display: none; /* Ocultar el checkbox */
+}
+
+.nav .menu-icon {
+    font-size: 30px;
+    color: #00ff00;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none; /* Ocultar el icono en pantallas grandes */
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
 }
 
 .nav a {
@@ -30,8 +51,7 @@ body {
     padding: 5px 10px;
     border: 1px solid #00ff00;
     border-radius: 5px;
-    display: inline-block; /* Cambiado de block a inline-block */
-    margin-bottom: 10px; /* Espacio entre los elementos */
+    display: inline-block;
 }
 
 .nav a:hover {
@@ -45,86 +65,32 @@ body {
     margin: 0 auto;
 }
 
-.card {
-    background-color: #333;
-    border: 1px solid #00ff00;
-    border-radius: 10px;
-    padding: 15px;
-    margin: 15px 0;
-}
+/* Media Queries para Responsividad */
 
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-
-.code-block {
-    background-color: #000;
-    padding: 15px;
-    border-radius: 5px;
-    overflow-x: auto;
-}
-
-.featured-image {
-    max-width: 100%;
-    height: auto;
-    border: 2px solid #00ff00;
-    border-radius: 5px;
-}
-
-/* Añadir Media Queries para Responsividad */
-
-/* Para pantallas más pequeñas (tabletas y pantallas medianas) */
+/* Para pantallas más pequeñas (menores a 768px) */
 @media (max-width: 768px) {
-    .grid-container {
-        grid-template-columns: 1fr; /* Cambiar a una columna para pantallas pequeñas */
+    .menu-icon {
+        display: block; /* Mostrar el icono de hamburguesa en pantallas pequeñas */
     }
 
-    .header {
-        padding: 15px; /* Reducir el padding en el header */
+    .nav-links {
+        display: none; /* Ocultar los enlaces por defecto */
+        flex-direction: column; /* Apilar los enlaces verticalmente */
+        width: 100%;
+        text-align: left; /* Alinear los enlaces a la izquierda */
+        background-color: #333;
+        position: absolute;
+        top: 60px; /* Colocar debajo del botón */
+        left: 0;
+        padding: 10px 0;
     }
 
-    .nav {
-        padding: 15px 0; /* Aumentar el padding para evitar que los enlaces se vean pegados */
-        text-align: left; /* Alinear el texto a la izquierda */
+    .nav .menu-toggle:checked + .menu-icon + .nav-links {
+        display: flex; /* Mostrar los enlaces cuando el checkbox está marcado */
     }
 
     .nav a {
-        margin: 10px 0; /* Asegurar que haya espacio entre los enlaces de navegación */
-        display: block; /* Hacer que los enlaces se apilen verticalmente */
-        padding: 10px 15px; /* Aumentar el padding para mejor separación */
+        margin: 10px 0; /* Añadir espacio entre los enlaces */
         width: 100%; /* Hacer que los enlaces ocupen todo el ancho */
-    }
-
-    .content {
-        padding: 15px; /* Reducir padding en el contenido */
-    }
-
-    .card {
-        margin: 10px 0; /* Reducir margen entre tarjetas */
-    }
-
-    .featured-image {
-        border-width: 1px; /* Reducir el grosor del borde de la imagen en pantallas pequeñas */
-    }
-}
-
-/* Para pantallas más pequeñas, como móviles (por debajo de 480px) */
-@media (max-width: 480px) {
-    .header {
-        font-size: 16px; /* Reducir tamaño de fuente en el header */
-    }
-
-    .nav a {
-        font-size: 14px; /* Reducir el tamaño de fuente en los enlaces de la navegación */
-    }
-
-    .content {
-        padding: 10px; /* Reducir padding del contenido */
-    }
-
-    .card {
-        padding: 10px; /* Reducir padding de las tarjetas */
     }
 }
