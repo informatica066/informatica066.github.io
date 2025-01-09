@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+<meta name='viewport' content='user-scalable=no, width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>El Rincón Friki de la Informática</title>
+</head>
+<body>
+    <div class="header">
+        <h1>El Rincón Friki de la Informática</h1>
+        <p>Tu portal definitivo para todo lo relacionado con la tecnología</p>
+    </div>
+
+    <div class="nav">
+        <a href="#inicio">Inicio</a>
+        <a href="#programacion">Programación</a>
+        <a href="#hardware">Hardware</a>
+        <a href="#trucos">Trucos</a>
+        <a href="PCBuilds.html">Builds PC</a>
+        <a href="#tutoriales">Tutoriales</a>
+        <a href="#noticias">Noticias</a>
+    </div>
+
+    <div class="content">
+        <div class="card">
+            <h2>Programación</h2>
+        <div class="card">
+            <h2>🐍 Python para Todos</h2>
+            <div class="code-block">
+                <pre>
+# Tu primer programa en Python
+def saludo_friki():
+    print("¡Hola, futuro programador!")
+    print("Bienvenido al mundo del código")
+
+saludo_friki()
+                </pre>
+            </div>
+            <p>Aprende Python desde cero con nuestros tutoriales estructurados:</p>
+            <ul>
+                <li>Fundamentos de programación</li>
+                <li>Estructuras de datos</li>
+                <li>Programación orientada a objetos</li>
+                <li>Desarrollo web con Django y Flask</li>
+                <li>Automatización y scripting</li>
+            </ul>
+        </div>
+    <footer style="text-align: center; padding: 20px; background-color: #000;">
+        <p>© 2024 El Rincón Friki de la Informática</p>
+        <p>Síguenos en nuestras redes sociales para más contenido friki</p>
+    </footer>
+</body>
+</html>
