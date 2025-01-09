@@ -1,102 +1,71 @@
-/* General */
 body {
-    background-color: #1a1a1a;
-    color: #00ff00;
-    font-family: 'Courier New', monospace;
-    margin: 0;
-    padding: 0;
-}
+            background-color: #1a1a1a;
+            color: #00ff00;
+            font-family: 'Courier New', monospace;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .header {
+            background-color: #000;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #00ff00;
+        }
+        
+        .nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav a {
+            color: #00ff00;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 5px 10px;
+            border: 1px solid #00ff00;
+            border-radius: 5px;
+        }
+        
+        .nav a:hover {
+            background-color: #00ff00;
+            color: #000;
+        }
+        
+        .content {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .card {
+            background-color: #333;
+            border: 1px solid #00ff00;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px 0;
+        }
 
-.header {
-    background-color: #000;
-    padding: 20px;
-    text-align: center;
-    border-bottom: 2px solid #00ff00;
-}
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
 
-.nav {
-    background-color: #333;
-    padding: 10px;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+        .code-block {
+            background-color: #000;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
 
-/* Icono de hamburguesa, solo visible en pantallas pequeñas */
-.menu-icon {
-    font-size: 30px;
-    color: #00ff00;
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: none; /* Ocultar el icono en pantallas grandes */
-}
-
-/* Enlaces del menú */
-.nav-links {
-    display: flex;
-    gap: 20px;
-}
-
-/* Estilo de los enlaces del menú */
-.nav a {
-    color: #00ff00;
-    text-decoration: none;
-    margin: 0 15px;
-    padding: 5px 10px;
-    border: 1px solid #00ff00;
-    border-radius: 5px;
-    display: inline-block;
-}
-
-.nav a:hover {
-    background-color: #00ff00;
-    color: #000;
-}
-
-/* Contenido principal */
-.content {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Media Queries para Responsividad */
-
-/* Para pantallas más pequeñas (menores a 768px) */
-@media (max-width: 768px) {
-    /* Mostrar el icono de hamburguesa en pantallas pequeñas */
-    .menu-icon {
-        display: block;
-    }
-
-    /* Ocultar los enlaces de navegación por defecto en pantallas pequeñas */
-    .nav-links {
-        display: none;
-        flex-direction: column; /* Apilar los enlaces verticalmente */
-        width: 100%;
-        text-align: left;
-        background-color: #333;
-        position: absolute;
-        top: 60px; /* Colocar debajo del icono de hamburguesa */
-        left: 0;
-        padding: 10px 0;
-        z-index: 99;
-    }
-
-    /* Mostrar los enlaces cuando el menú tenga la clase 'active' */
-    .nav-links.active {
-        display: flex;
-    }
-
-    /* Alinear los enlaces de forma que ocupen todo el ancho */
-    .nav a {
-        margin: 10px 0;
-        width: 100%; /* Hacer que los enlaces ocupen todo el ancho */
-        text-align: center; /* Centrar los enlaces */
-    }
-}
+        .featured-image {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #00ff00;
+            border-radius: 5px;
+        }
