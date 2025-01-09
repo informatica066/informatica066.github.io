@@ -26,7 +26,11 @@ body {
     align-items: center;
 }
 
-.menu-icon {
+.nav .menu-toggle {
+    display: none; /* Ocultar el checkbox */
+}
+
+.nav .menu-icon {
     font-size: 30px;
     color: #00ff00;
     background: none;
@@ -59,6 +63,38 @@ body {
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+/* Media Queries para Responsividad */
+
+/* Para pantallas más pequeñas (menores a 768px) */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Mostrar el icono de hamburguesa en pantallas pequeñas */
+    }
+
+    .nav-links {
+        display: none; /* Ocultar los enlaces por defecto */
+        flex-direction: column; /* Apilar los enlaces verticalmente */
+        width: 100%;
+        text-align: left; /* Alinear los enlaces a la izquierda */
+        background-color: #333;
+        position: absolute;
+        top: 60px; /* Colocar debajo del botón */
+        left: 0;
+        padding: 10px 0;
+        z-index: 99; /* Asegurarse de que el menú aparezca encima de otros elementos */
+    }
+
+    .nav .menu-toggle:checked + .menu-icon + .nav-links {
+        display: flex; /* Mostrar los enlaces cuando el checkbox está marcado */
+    }
+
+    .nav a {
+        margin: 10px 0; /* Añadir espacio entre los enlaces */
+        width: 100%; /* Hacer que los enlaces ocupen todo el ancho */
+        text-align: center; /* Centrar los enlaces */
+    }
 }
 
 /* Media Queries para Responsividad */
