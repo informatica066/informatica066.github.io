@@ -92,5 +92,6 @@ body {
     .nav a {
         margin: 10px 0; /* Añadir espacio entre los enlaces */
         width: 100%; /* Hacer que los enlaces ocupen todo el ancho */
+        text-align:center;
     }
 }
