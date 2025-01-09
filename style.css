@@ -26,11 +26,7 @@ body {
     align-items: center;
 }
 
-.nav .menu-toggle {
-    display: none; /* Ocultar el checkbox */
-}
-
-.nav .menu-icon {
+.menu-icon {
     font-size: 30px;
     color: #00ff00;
     background: none;
@@ -83,15 +79,16 @@ body {
         top: 60px; /* Colocar debajo del botón */
         left: 0;
         padding: 10px 0;
+        z-index: 99; /* Asegurarse de que el menú aparezca encima de otros elementos */
     }
 
-    .nav .menu-toggle:checked + .menu-icon + .nav-links {
-        display: flex; /* Mostrar los enlaces cuando el checkbox está marcado */
+    .nav-links.active {
+        display: flex; /* Mostrar los enlaces cuando el menú tiene la clase 'active' */
     }
 
     .nav a {
         margin: 10px 0; /* Añadir espacio entre los enlaces */
         width: 100%; /* Hacer que los enlaces ocupen todo el ancho */
-        text-align:center;
+        text-align: center; /* Centrar los enlaces */
     }
 }
