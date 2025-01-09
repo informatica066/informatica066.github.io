@@ -73,22 +73,24 @@ body {
 
 /* Añadir Media Queries para Responsividad */
 
-/* Para pantallas más pequeñas, ajustamos la cuadrícula */
+/* Para pantallas más pequeñas (tabletas y pantallas medianas) */
 @media (max-width: 768px) {
     .grid-container {
         grid-template-columns: 1fr; /* Cambiar a una columna para pantallas pequeñas */
     }
-    
+
     .header {
         padding: 15px; /* Reducir el padding en el header */
     }
 
     .nav {
-        padding: 8px; /* Reducir el padding en la navegación */
+        padding: 15px 0; /* Aumentar el padding para evitar que los enlaces se vean pegados */
     }
 
     .nav a {
-        margin: 0 10px; /* Reducir el margen de los enlaces de navegación */
+        margin: 10px 0; /* Asegurar que haya espacio entre los enlaces de navegación */
+        display: block; /* Hacer que los enlaces se apilen verticalmente */
+        padding: 10px 0; /* Aumentar el padding para mejor separación */
     }
 
     .content {
@@ -104,7 +106,7 @@ body {
     }
 }
 
-/* Para pantallas muy pequeñas, como móviles (por debajo de 480px) */
+/* Para pantallas más pequeñas, como móviles (por debajo de 480px) */
 @media (max-width: 480px) {
     .header {
         font-size: 16px; /* Reducir tamaño de fuente en el header */
