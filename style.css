@@ -36,6 +36,61 @@ body {
     color: #000;
 }
 
+/* Mobile menu styles */
+.menu-icon {
+    font-size: 30px;
+    color: #00ff00;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none; /* Hidden by default on larger screens */
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row; /* Horizontal layout by default */
+}
+
+/* Mobile view: Hide the nav-links by default */
+.nav-links {
+    display: none;
+    flex-direction: column; /* Stack the links vertically on mobile */
+    align-items: center;
+    width: 100%;
+}
+
+/* Show the nav-links when the menu icon is clicked */
+.nav-links.show {
+    display: flex;
+}
+
+/* Responsive design: On screens smaller than 768px, display the hamburger menu */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Show the hamburger menu on small screens */
+    }
+
+    .nav-links {
+        display: none; /* Hide menu links by default */
+        flex-direction: column; /* Stack links vertically */
+        align-items: center;
+        width: 100%;
+    }
+
+    .nav-links a {
+        padding: 10px;
+        width: 100%; /* Make the links take up the full width */
+        text-align: center;
+    }
+
+    /* Show the menu when it's active */
+    .nav-links.show {
+        display: flex;
+    }
+}
+
 .content {
     padding: 20px;
     max-width: 1200px;
@@ -85,24 +140,3 @@ footer {
 footer p {
     color: #00ff00;
 }
-
-/* Mobile menu script toggle */
-/* Ensure the nav-links are hidden by default on small screens */
-.nav-links {
-    display: none;
-    flex-direction: column; /* Stack the menu items vertically */
-    align-items: center;
-    width: 100%;
-}
-
-.nav-links a {
-    padding: 10px;
-    width: 100%; /* Ensure the links stretch across the width */
-    text-align: center;
-}
-
-/* Show the menu when it's toggled */
-.nav-links.show {
-    display: flex;
-}
-
