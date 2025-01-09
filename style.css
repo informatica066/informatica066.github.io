@@ -32,7 +32,7 @@ body {
     background: none;
     border: none;
     cursor: pointer;
-    display: none; /* Ocultar el icono de hamburguesa en pantallas grandes */
+    display: none; /* Ocultar el icono en pantallas grandes */
 }
 
 .nav-links {
@@ -69,10 +69,9 @@ body {
         display: block; /* Mostrar el icono de hamburguesa en pantallas pequeñas */
     }
 
-    /* Ocultar el menú por defecto */
     .nav-links {
-        display: none;
-        flex-direction: column;
+        display: none; /* Ocultar los enlaces por defecto */
+        flex-direction: column; /* Apilar los enlaces verticalmente */
         width: 100%;
         text-align: left;
         background-color: #333;
@@ -83,14 +82,13 @@ body {
         z-index: 99;
     }
 
-    /* Mostrar el menú cuando el checkbox está marcado */
-    .menu-toggle:checked + .menu-icon + .nav-links {
-        display: flex;
+    .nav-links.active {
+        display: flex; /* Mostrar los enlaces cuando el menú tiene la clase 'active' */
     }
 
     .nav a {
-        margin: 10px 0;
-        width: 100%;
-        text-align: center;
+        margin: 10px 0; /* Añadir espacio entre los enlaces */
+        width: 100%; /* Hacer que los enlaces ocupen todo el ancho */
+        text-align: center; /* Centrar los enlaces */
     }
 }
