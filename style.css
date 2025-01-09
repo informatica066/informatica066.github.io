@@ -53,7 +53,7 @@ body {
     flex-direction: row; /* Horizontal layout by default */
 }
 
-/* Mobile view: Hide the nav-links by default */
+/* Hide nav-links by default on mobile */
 .nav-links {
     display: none;
     flex-direction: column; /* Stack the links vertically on mobile */
@@ -61,21 +61,23 @@ body {
     width: 100%;
 }
 
-/* Show the nav-links when the menu icon is clicked */
+/* Show nav-links when the menu icon is clicked */
 .nav-links.show {
     display: flex;
 }
-/* On larger screens, display the menu links as a horizontal list */
+
+/* On larger screens (desktop), always display the menu links as a horizontal list */
 @media (min-width: 769px) {
     .nav-links {
-        display: flex; /* Make sure the menu is displayed on larger screens */
+        display: flex; /* Ensure the menu is displayed on larger screens */
+        flex-direction: row; /* Horizontal layout */
     }
 }
 
-/* Responsive design: On screens smaller than 768px, display the hamburger menu */
+/* On mobile devices (smaller than 768px), show the hamburger icon */
 @media (max-width: 768px) {
     .menu-icon {
-        display: block; /* Show the hamburger menu on small screens */
+        display: block; /* Show the hamburger icon on small screens */
     }
 
     .nav-links {
