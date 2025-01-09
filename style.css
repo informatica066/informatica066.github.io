@@ -50,7 +50,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row; /* Horizontal layout by default */
+    flex-direction: row; /* Horizontal layout by default on large screens */
 }
 
 /* Hide nav-links by default on mobile */
