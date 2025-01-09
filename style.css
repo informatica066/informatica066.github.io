@@ -87,10 +87,22 @@ footer p {
 }
 
 /* Mobile menu script toggle */
+/* Ensure the nav-links are hidden by default on small screens */
 .nav-links {
     display: none;
+    flex-direction: column; /* Stack the menu items vertically */
+    align-items: center;
+    width: 100%;
 }
 
-.nav-links.show {
-    display: block;
+.nav-links a {
+    padding: 10px;
+    width: 100%; /* Ensure the links stretch across the width */
+    text-align: center;
 }
+
+/* Show the menu when it's toggled */
+.nav-links.show {
+    display: flex;
+}
+
