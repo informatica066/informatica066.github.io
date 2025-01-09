@@ -1,8 +1,9 @@
-// JavaScript para el menú hamburguesa
+// Obtener el botón del menú y el contenedor de enlaces
 const menuIcon = document.getElementById('menu-icon');
 const navLinks = document.getElementById('nav-links');
 
-// Función para alternar el estado del menú
+// Agregar un evento de clic al icono de hamburguesa
 menuIcon.addEventListener('click', function() {
-    navLinks.classList.toggle('active'); // Alternar la clase 'active' en los enlaces del menú
+    // Alternar la clase 'active' en los enlaces del menú
+    navLinks.classList.toggle('active');
 });
