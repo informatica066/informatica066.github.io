@@ -1,12 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1">
+    <meta name="description" content="El Rincón Friki de la Informática: Tu portal para aprender sobre programación, hardware, trucos, y más.">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>El Rincón Friki de la Informática</title>
+</head>
+<body>
+    <header class="header">
+        <h1>El Rincón Friki de la Informática</h1>
+        <p>Tu portal definitivo para todo lo relacionado con la tecnología</p>
+    </header>
 
-
-
-
-
-
-
-
-  <nav class="nav">
+   <nav class="nav">
     <button class="menu-icon" id="menu-icon">&#9776;</button> <!-- Icono de hamburguesa -->
     <div class="nav-links" id="nav-links">
         <a href="programacion.html">Programación</a>
@@ -18,3 +25,34 @@
         <a href="#Errores">Errores</a>
     </div>
 </nav>
+
+
+    <main class="content">
+        <section class="card">
+            <h2>Recall error con windows 11</h2>
+            <div class="grid-container">
+                <section>
+                    <h3>Recall</h3>
+                    <ul>
+                        <li>Hace capturas de pantalla en nuestro ordenador para poder mejorar la experiencia con la inteligencia
+            artificial.</li>
+                        <li>Lo recomendable seria quitarlo</li>
+                        <li>Para poder quitarlo hay que hacer lo siguiente</li>
+                        <li>Mirar si lo tenemos quitado ya que la version donde esta implementado es en la version de windows 24h2</li>
+                      <li>Damos al boton windows escribimos cmd y lo ejecutamos como administrador</li>
+                      <li>Una vez dentro comprobamos si esta activado para ello hacemos lo siguiente</li>
+                      <li>dism /online /Get-featureinfo /Featurename:Recall con este comando comprabamos si esta activo que nos saldra
+            Recall:Enable</li>
+                      <li>Si es asi para desactivarlo escribimos lo siguiente dism /online /Disable-feature /Featurename:recall</li>
+                       <li>Nos pidira que reiniciemos una vez reiniciamos ya lo tendremos desactivado</li>
+                    </ul>
+                </section>
+                <section>
+
+
+
+
+
+
+
+
