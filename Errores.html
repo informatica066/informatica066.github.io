@@ -52,7 +52,25 @@
         <p>© 2024 El Rincón Friki de la Informática</p>
         <p>Síguenos en nuestras redes sociales para más contenido friki</p>
     </footer>
+ <script>
+        function searchWord() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const sections = document.querySelectorAll('.section');
+            let found = false;
 
+            sections.forEach(section => {
+                const sectionText = section.innerText.toLowerCase();
+                if (sectionText.includes(searchTerm)) {
+                    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    found = true;
+                }
+            });
+
+            if (!found) {
+                alert('No se encontró la palabra.');
+            }
+        }
+    </script>
     <script src="scripts.js"></script> 
 </body>
 </html>
